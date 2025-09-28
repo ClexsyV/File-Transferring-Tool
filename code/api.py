@@ -4,5 +4,5 @@ api = Blueprint('api', __name__)
 
 @api.route('/')
 def index():
-  redirect(url_for('pages.index'))
+  return redirect(url_for('pages.index'))
 
