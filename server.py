@@ -10,7 +10,7 @@ def create_app() -> object:
     app = Flask(__name__)
     register_blueprints(app)
 
-    return sovellus
+    return app
 
 
 
@@ -18,7 +18,7 @@ def start_server(settings:object):
     """
     """
 
-    app = luo_sovellus()
+    app = create_app()
     app.config.from_object(settings)
     
     app.run(port=app.config['PORT'], host=app.config['HOST'])
