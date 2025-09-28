@@ -1,6 +1,6 @@
 from flask import Flask
-from code import register_blueprints
-from Config import Settings
+from src import register_blueprints
+from config import Settings
 
 
 def create_app() -> object:
